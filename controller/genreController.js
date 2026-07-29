@@ -18,6 +18,9 @@ async function getGenreById(req, res) {
             return res.status(404).json({ error: 'Genre not found' });
         }
         res.status(200).json(genre);
-    } 
+    } catch (err) {
+        console.error(`Error fetching genre with id ${id}:`, err.message);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 }
 
