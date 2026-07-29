@@ -9,3 +9,8 @@ async function getAllGenre(req, res) {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
+
+async function getGenreById(req, res) {
+    
+}
+
