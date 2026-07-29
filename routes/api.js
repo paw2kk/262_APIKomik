@@ -22,7 +22,7 @@ router.delete('/komik/:id', authMiddleware, komikController.deleteKomik);
 router.get('/genre', authMiddleware, genreController.getAllGenre);
 router.get('/genre/:id', authMiddleware, genreController.getGenreById);
 router.post('/genre', authMiddleware, genreController.createGenre);
-
+router.put('/genre/:id', authMiddleware, genreController.updateGenre);
 
 
 module.exports = router;
