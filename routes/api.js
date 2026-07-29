@@ -20,5 +20,7 @@ router.delete('/komik/:id', authMiddleware, komikController.deleteKomik);
 
 //genre - semua method wajib login
 router.get('/genre', authMiddleware, genreController.getAllGenre);
+router.get('/genre/:id', authMiddleware, genreController.getGenreById);
+
 
 module.exports = router;
